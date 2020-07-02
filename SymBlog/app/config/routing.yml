@@ -1,0 +1,21 @@
+BlogBundle_homepage:
+    path: /
+    controller: BlogBundle\Controller\PageController::indexAction
+    methods: [GET]
+
+BlogBundle_about:
+    path: /about
+    controller: BlogBundle\Controller\PageController::aboutAction
+    methods: [GET]
+
+BlogBundle_contact:
+    path: /contact
+    controller: BlogBundle\Controller\PageController::contactAction
+    methods: [GET, POST]
+
+BlogBundle_blog_show:
+    path: /{id}
+    controller: BlogBundle\Controller\BlogController::showAction
+    methods: [GET]
+    requirements:
+            id: \d+

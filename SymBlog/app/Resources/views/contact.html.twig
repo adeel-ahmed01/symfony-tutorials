@@ -1,0 +1,37 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}Contact{% endblock%}
+
+{% block body %}
+    <header>
+        <h1>Contact symblog</h1>
+    </header>
+
+    <p>Want to contact symblog?</p>
+
+    <form class="blogger">
+        <div>
+            {{ form_widget(form.name) }}
+            {{ form_errors(form.name) }}
+        </div>
+        <div>
+            {{ form_widget(form.email) }}
+            {{ form_errors(form.email) }}
+        </div>
+        <div>
+            {{ form_widget(form.subject) }}
+            {{ form_errors(form.subject) }}
+        </div>
+        <div>
+            {{ form_widget(form.body) }}
+            {{ form_errors(form.body) }}
+        </div>
+
+        <div style="display:none">
+            {{ form_rest(form) }}
+        </div>
+
+        <input type="submit" value="Submit">
+    </form>
+
+{% endblock %}
